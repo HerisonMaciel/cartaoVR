@@ -2,7 +2,6 @@ package com.api.cartaovr.models;
 
 import lombok.Data;
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -21,7 +20,7 @@ public class CartaoModel implements Serializable {
     @Column(nullable = false, unique = true, length = 16)
     private String numero;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 255)
     private String senha;
 
     @Column(nullable = false, precision = 10, scale = 2)
