@@ -13,9 +13,12 @@ import java.util.UUID;
 public class CartaoModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    /*@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;*/
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
 
     @Column(nullable = false, unique = true, length = 16)
     private String numero;
